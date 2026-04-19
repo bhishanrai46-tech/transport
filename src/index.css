@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif, "Inter";
+  --font-mono: "Courier New", Courier, monospace, "Courier Prime";
+}
+
+:root {
+  --bg: #E4E3E0;
+  --ink: #141414;
+  --line: #141414;
+  --accent: #FF5F00;
+  --dim: rgba(20, 20, 20, 0.4);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for High Density Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-left: 1px solid var(--line);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink);
+}
+
+.mono-value {
+  font-family: var(--font-mono);
+  font-weight: bold;
+}
+
+.italic-serif {
+  font-family: Georgia, serif;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.panel-border {
+  border: 1px solid var(--line);
+}
+
+.data-table th {
+  background: #D9D8D5;
+  border-bottom: 1px solid var(--line);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.data-table td {
+  border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+  font-family: var(--font-mono);
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
